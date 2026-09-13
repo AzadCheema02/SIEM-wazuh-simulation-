@@ -12,7 +12,7 @@ This repository documents a custom-built Security Operations Center (SOC) home l
 
 ## ⚔️ Detection Scenarios
 ### Windows
-*   [Scenario 1: Fileless PowerShell Stager & Policy Bypass](./attacks/windows/Scenario-1-PowerShell.md)
+*   [Scenario 1: Fileless PowerShell Stager & Policy Bypass](Scenario-1-PowerShell.md)
 
 ### Linux
 *   *Coming soon...*
