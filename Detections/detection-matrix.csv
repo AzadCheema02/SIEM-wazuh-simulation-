@@ -1,1 +1,2 @@
-
+Detection ID,Detection Name,Platform,Data Source,Detection Type,Severity,MITRE ATT&CK,Rule ID,Status
+DET-001,SSH Brute Force - High Frequency Password Guessing,Ubuntu,SSH Authentication Logs,Custom Wazuh Rule,High,T1110.001,100010,Validated
