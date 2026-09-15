@@ -1,1 +1,2 @@
-
+Detection ID,Technique ID,Technique,Sub-Technique,Tactic,Platform,Evidence,Status
+DET-001,T1110,Brute Force,T1110.001 Password Guessing,Credential Access,Ubuntu,Repeated failed SSH authentication attempts,Validated
