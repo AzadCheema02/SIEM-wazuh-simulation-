@@ -281,17 +281,28 @@ Successful authentication
         =
 Potential Account Compromise
 ```
-Detection Status
-```text
-DET-001 — SSH Brute Force
 
-Attack:        Hydra SSH brute-force simulation
-Source:        10.10.10.40
-Target:        10.10.10.30
-Rule:          100010
-Severity:      High
-Failures:      5
-Successful Login: NO
-MITRE:         T1110.001
-Status:        VALIDATED
+### DET-001 Status
+
+```text
+ATTACK
+   Hydra SSH brute-force simulation
+TELEMETRY
+   SSH authentication events
+DECODING
+   sshd decoder
+BASE DETECTION
+   Rule 5760
+CUSTOM DETECTION
+   Rule 100010
+CORRELATION
+   5 events / same source / 120 seconds
+ALERT
+   Level 12
+MITRE
+   T1110.001
+LOGTEST
+   Rule 100010 reproduced
+STATUS
+   VALIDATED
 ```
