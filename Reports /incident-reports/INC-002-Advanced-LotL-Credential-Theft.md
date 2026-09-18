@@ -157,7 +157,7 @@ The simulation confirmed that relying on image names or standard system utilitie
 
 **Related Documentation:**
 * **Attack Documentation:** `Attacks/windows/DET-002-Advanced-LotL-Credential-Theft/attack.md`
-* **Attack Commands:** `Attacks/windows/DET-002-Advanced-LotL-Credential-Theft/commands.txt`
+* **Attack Commands:** `Attacks/windows/DET-002-Advanced-LotL-Credential-Theft/commands.md`
 * **Detection Matrix:** `Detections/detection-matrix.csv`
 * **Threat Hunting Queries:** `Threat-Hunting/queries/DET-002-queries.txt`
 
