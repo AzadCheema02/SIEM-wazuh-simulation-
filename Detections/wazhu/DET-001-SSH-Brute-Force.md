@@ -207,6 +207,7 @@ Level 12 Detection ✓
 The detection logic was therefore validated both against live attack telemetry and through Wazuh's rule-testing engine.
 Evidence screenshot:
 * `Dashboards/screenshots/DET-001-wazuh-alert.png`
+* 'Dashboards/screenshots/DET-001-logtest-validation.png'
 
 ## 10. MITRE ATT&CK Mapping
 Technique
