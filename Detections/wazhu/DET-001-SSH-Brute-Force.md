@@ -126,15 +126,15 @@ Rule Configuration
 
 ## 9. Detection Validation & Evidence
 
-The detection was validated by executing the SSH brute-force simulation against the Ubuntu target.
+The detection was validated using two independent tests.
+### 7.1 Live Attack Validation
 
-Wazuh successfully generated the custom detection alert.
-
-Observed Alert
+A controlled SSH brute-force simulation was executed from the Kali attacker against the Ubuntu target.
 ```text
 Rule ID: 100010
 Rule Level: 12
 Description: Custom Detection: SSH Brute Force - High frequency password guessing
+MITRE ATT&CK: T1110.001 - Password Guessing
 
 Source IP: 10.10.10.40
 Destination IP: 10.10.10.30
@@ -143,22 +143,68 @@ Username: root
 Failed Authentication Attempts: 5
 Successful Authentication: NO
 ```
-Detection Result
-```text
-Attack Generated
-        ↓
-SSH Authentication Failures
-        ↓
-Wazuh Telemetry
-        ↓
-Rule 5760
-        ↓
-Custom Rule 100010
-        ↓
-Level 12 Alert
-        ↓
-Detection Successful
+### 7.2Wazuh Logtest Validation
+
+The underlying SSH authentication event was tested using Wazuh's rule-testing utility:
+```bash
+sudo /var/ossec/bin/wazuh-logtest
 ```
+The actual SSH event generated during the attack was used:
+```text
+Sep 14 11:56:36 cheema sshd-session[2886]: Failed password for root from 10.10.10.40 port 53578 ssh2
+```
+Phase 1 — Pre-decoding
+
+Wazuh successfully extracted:
+```text
+hostname: cheema
+program_name: sshd-session
+timestamp: Sep 14 11:56:36
+```
+
+Phase 2 — Decoding
+
+The SSH decoder successfully extracted:
+```text
+decoder: sshd
+dstuser: root
+srcip: 10.10.10.40
+srcport: 53578
+```
+Phase 3 — Rule Matching
+
+The individual event matched the expected base rule:
+```text
+Rule ID: 5760
+Description: sshd: authentication failed.
+```
+Five matching SSH authentication-failure events from the same source IP were then supplied within the same logtest session.
+
+The custom correlation rule successfully triggered:
+```text 
+Rule ID: 100010
+Rule Level: 12
+Description: Custom Detection: SSH Brute Force - High frequency password guessing
+```
+Validatio Result
+```text
+Raw SSH Event
+      ↓
+Pre-decoding ✓
+      ↓
+SSH Decoder ✓
+      ↓
+Base Rule 5760 ✓
+      ↓
+5 matching events
+      ↓
+Same source IP ✓
+      ↓
+Custom Rule 100010 ✓
+      ↓
+Level 12 Detection ✓
+```
+The detection logic was therefore validated both against live attack telemetry and through Wazuh's rule-testing engine.
 Evidence screenshot:
 * `Dashboards/screenshots/DET-001-wazuh-alert.png`
 
