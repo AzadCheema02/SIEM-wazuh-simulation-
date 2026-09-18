@@ -1,2 +1,7 @@
 Detection ID,Technique ID,Technique,Sub-Technique,Tactic,Platform,Evidence,Status
 DET-001,T1110,Brute Force,T1110.001 Password Guessing,Credential Access,Ubuntu,Repeated failed SSH authentication attempts,Validated
+DET-002,T1127,Trusted Developer Utilities Proxy Execution,T1127.001 MSBuild,Defense Evasion,Windows 11,MSBuild.exe spawning command shell,Validated
+DET-002,T1003,OS Credential Dumping,T1003.002 Security Account Manager,Credential Access,Windows 11,Win32_ShadowCopy execution via command line,Validated
+DET-002,T1047,Windows Management Instrumentation,,Execution,Windows 11,Invoke-CimMethod creating volume shadow copy,Validated
+DET-002,T1036,Masquerading,T1036.005 Match Legitimate Name or Location,Defense Evasion,Windows 11,originalFileName rclone.exe executing as backup_service.exe,Validated
+DET-002,T1567,Exfiltration Over Web Service,T1567.002 Exfiltration to Cloud Storage,Exfiltration,Windows 11,backup_service.exe initiating outbound connection to port 8080,Validated
