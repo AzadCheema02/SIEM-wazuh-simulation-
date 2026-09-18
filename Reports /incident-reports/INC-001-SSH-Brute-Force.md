@@ -147,10 +147,12 @@ The scenario demonstrated that repeated SSH authentication failures can be corre
 * `DET-001-attack.png`
 * `DET-001-authentication-events.png`
 * `DET-001-wazuh-alert.png`
+* `DET-001-logtest-validation.png`
 
 **Related Documentation:**
 * **Attack:** `Attacks/linux/DET-001-SSH-Brute-Force/`
 * **Detection:** `Detections/wazuh/DET-001-SSH-Brute-Force.md`
+  
 
 ---
 
