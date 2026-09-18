@@ -20,5 +20,10 @@ Supporting documentation:
 
 ```text
 Attacks/linux/DET-001-SSH-Brute-Force/
+```
+```text
 Detections/wazuh/DET-001-SSH-Brute-Force.md
+```
+```text
 Reports/incident-reports/INC-001-SSH-Brute-Force.md
+```
