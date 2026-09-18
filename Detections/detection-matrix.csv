@@ -1,2 +1,6 @@
 Detection ID,Detection Name,Platform,Data Source,Detection Type,Severity,MITRE ATT&CK,Rule ID,Status
 DET-001,SSH Brute Force - High Frequency Password Guessing,Ubuntu,SSH Authentication Logs,Custom Wazuh Rule,High,T1110.001,100010,Validated
+DET-002,Defense Evasion - MSBuild Proxy Execution,Windows 11,Sysmon Event ID 1,Custom Wazuh Rule,Critical,T1127.001,100020,Validated
+DET-002,Credential Access - Volume Shadow Copy via WMI/CIM,Windows 11,Sysmon Event ID 1,Custom Wazuh Rule,High,"T1003.002, T1047",100021,Validated
+DET-002,Exfiltration - Rclone Execution via OriginalFileName,Windows 11,Sysmon Event ID 1,Custom Wazuh Rule,Critical,T1567.002,100022,Validated
+DET-002,Exfiltration - Suspicious Backup Process Network Connection,Windows 11,Sysmon Event ID 3,Custom Wazuh Rule,Critical,T1567.002,100023,Validated
