@@ -132,19 +132,16 @@ Identified detection engineering enhancements:
 
 ---
 
-## Screenshot Capture Guide
+## Dashboard Visualizations
 
-Save the following captures to `Dashboards/screenshots/` to complete the evidence repository:
+![DET-003 Attack Execution](../../Dashboards/screenshots/DET-003-attack-execution.png)
+*Figure 1.0: Target Endpoint - Administrative PowerShell executing ransomware simulation script.*
 
-* **DET-003-attack-execution.png**
-    * *Location:* Windows 11 Target.
-    * *Details:* PowerShell window displaying execution of `ransomware_sim.ps1` and directory listing of `C:\Finance_Data` showing `.crypt` files.
-* **DET-003-wazuh-alert-100030.png**
-    * *Location:* Wazuh / OpenSearch Dashboards (Discover tab).
-    * *Details:* Expanded record for Rule 100030 showing `win.eventdata.commandLine` containing `vssadmin delete shadows` and level: 12.
-* **DET-003-wazuh-alert-100031.png**
-    * *Location:* Wazuh / OpenSearch Dashboards (Discover tab).
-    * *Details:* Expanded record for Rule 100031 showing FIM alert for `.crypt` file creation in `C:\Finance_Data`.
-* **DET-003-Ransomware-Dashboard.png**
-    * *Location:* OpenSearch Dashboards (Dashboard view).
-    * *Details:* Complete 3-panel dashboard containing the Ransomware Rule Distribution (Pie Chart), Encrypted File Ledger (Data Table), and Defense Evasion Activity (Saved Search).
+![Ransomware Dashboard](../../Dashboards/screenshots/DET-003-Ransomware-Dashboard.png)
+*Figure 1.1: Complete OpenSearch Dashboard illustrating attack phase distribution, compromised file ledger, and defense evasion command telemetry.*
+
+![Rule 100030 Alert](../../Dashboards/screenshots/DET-003-wazuh-alert-100030.png)
+*Figure 1.2: Rule 100030 (Level 12) triggering on defense evasion commands (vssadmin).*
+
+![Rule 100031 Alert](../../Dashboards/screenshots/DET-003-wazuh-alert-100031.png)
+*Figure 1.3: Rule 100031 (Level 12) FIM alert capturing rapid .crypt file creation.*
