@@ -6,7 +6,7 @@ This repository documents a custom-built Security Operations Center (SOC) home l
 ## 🏗️ Architecture
 *   **SIEM:** Wazuh (Elastic Stack)
 *   **Endpoints:** 
-    *   Windows 10 / 11 (Sysmon with SwiftOnSecurity configuration)
+    *   Windows 11 (Sysmon with SwiftOnSecurity configuration)
     *   Ubuntu Linux (Auditd)
 *   **Attack Infrastructure:** Kali Linux
 
@@ -34,7 +34,10 @@ This repository documents a custom-built Security Operations Center (SOC) home l
 
 ## ⚔️ Detection Scenarios
 ### Windows
-*   [Scenario 1: Fileless PowerShell Stager & Policy Bypass](Scenario-1-PowerShell.md)
+*   1. SSH Brute Force
+*   *more coming soon*
 
 ### Linux
-*   *Coming soon...*
+*   2. Advanced Living of the land Credential Theft
+*   3. Ransomaware
+*   *more coming soon*
