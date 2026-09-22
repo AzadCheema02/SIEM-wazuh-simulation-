@@ -5,3 +5,6 @@ DET-002,T1003,OS Credential Dumping,T1003.002 Security Account Manager,Credentia
 DET-002,T1047,Windows Management Instrumentation,,Execution,Windows 11,Invoke-CimMethod creating volume shadow copy,Validated
 DET-002,T1036,Masquerading,T1036.005 Match Legitimate Name or Location,Defense Evasion,Windows 11,originalFileName rclone.exe executing as backup_service.exe,Validated
 DET-002,T1567,Exfiltration Over Web Service,T1567.002 Exfiltration to Cloud Storage,Exfiltration,Windows 11,backup_service.exe initiating outbound connection to port 8080,Validated
+100030,T1490,Inhibit System Recovery,N/A,Defense Evasion,Windows,"Command line execution of vssadmin and bcdedit",Validated
+100030,T1070,Indicator Removal,T1070.001,Defense Evasion,Windows,"Command line execution of wevtutil cl",Validated
+100031,T1486,Data Encrypted for Impact,N/A,Impact,Windows,"Syscheck file modification alerts for .crypt extensions in C:\Finance_Data",Validated
